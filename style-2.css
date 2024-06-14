@@ -1,0 +1,166 @@
+.gradient-background {
+    background: linear-gradient(300deg, #F5EFE7, #19A7CE, #001B3A);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
+
+#main-title {
+  text-align: center;
+    margin: 50px;
+}
+
+#gif {
+  position: relative;
+  width: 70x;
+  margin: auto;
+  display: grid;
+  margin: 0 auto;
+  width: 70%;
+}
+
+#the-title {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 5.7rem;
+    font-family: 'BradleyHand ITC';
+    font-weight: bold;
+    
+}
+
+#title-2 {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 4.7rem;
+  font-family: 'BradleyHand ITC';
+  font-weight: bold;
+  
+}
+
+
+body {
+    background-color: black;
+}
+
+
+#model-text {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    color: #FFFFFF;
+    font-size: 3rem;
+     
+}
+
+
+
+#model-text-div {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#about {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.create-river-div {
+  text-align: center;
+  margin: auto;
+}
+
+.create-river {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1rem; 
+    font-weight: bolder;
+    word-spacing: 5px;
+
+}
+
+#start {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 4rem; 
+  font-weight: bolder;
+  word-spacing: 5px;
+
+}
+
+#start:hover {
+  text-shadow:
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff;
+}
+
+.create-river:hover {
+
+}
+
+
+
+#kanji {
+  
+  /* position: relative; */
+  margin: 0 auto;
+  width: 40%;
+}
+
+#gif {
+  position: relative;
+  width: 70x;
+  margin: auto;
+}
+#image {
+  display: grid;
+  
+}
+
+
+
+.create-river-div {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#about-div {
+  margin-bottom: 80px;
+  width: 100%;
+  
+}
+
+#about:hover {
+  text-shadow:
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff,
+  0 0 2px #fff;
+}

@@ -1,0 +1,1251 @@
+/* Homepage Style Code  */
+
+
+/* Homepage Background Animation */
+
+.gradient-background {
+  background: linear-gradient(300deg, #F5EFE7, #19A7CE, #001B3A);
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body{
+  /* padding-top: 3rem; */
+}
+
+/* Main Title "Create Your Animation" Gif */
+#main-title {
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Create Your River gif  */
+#gif {
+}
+  
+
+
+    /* Logo*/
+.image {
+  align-items: center;
+  margin: auto;
+
+}
+
+.kanji-logo {
+
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+  /* -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.02));   */
+}
+  
+
+
+
+
+/* Media Queries for Elememts Across all Web Pages*/
+/* Mobile Devices 319px - 480px */
+@Media(max-width: 480px) {  
+  .kanji-logo {
+    max-width: 100%;
+  }
+  #gif {
+    max-width: 100%;
+    /* margin-top: 5%; */
+  }
+
+  .kanji-logo-screen-mode-page {
+    max-width: 70%;
+    margin-left: 13%;
+  }
+
+  .start-button {
+    max-height: 3rem;
+    max-width: 17rem;
+  }
+  .about-button {
+    max-height: 3rem;
+    max-width: 7rem;
+  }
+
+  body {
+    padding-top: 0.7rem;
+  }
+
+  .selection {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+  }
+
+  .portraits {
+    max-width: 70%;
+    margin-top: 19%;
+    margin-bottom: 19%;
+  }
+  
+  .landscapes {
+   max-width: 70%;
+  }
+
+  .portrait-div {
+    margin-bottom: 28%;
+  }
+
+  .portrait-text {
+  }
+
+  .landscape-div {
+  }
+
+  .description {
+    text-align: left;
+  }
+
+  .headers {
+    text-align: left;
+  }
+
+  .landscape-river-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  .new-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+
+  .portrait-river-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    /* margin-left: 1.5%; */
+  }
+
+  .portrait-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+
+}
+
+
+
+/* Button Sizes */
+
+/* Start Button Size 
+  height: 4rem;
+  width: 20rem;
+*/
+
+/* About Button Size
+  height: 4rem;
+  width: 8rem;
+*/
+
+/* iPads and Tablets 481px - 1200px */
+@Media(min-width: 481px) and (max-width: 1200px) {
+  .kanji-logo {
+    max-width: 70%;
+    margin-left: 14.5%;
+  }
+
+  .kanji-logo-screen-mode-page {
+    max-width: 50%;
+    margin-left: 24%;
+  }
+
+  #gif {
+    max-width: 80%;
+    /* margin-top: 5%; */
+  }
+  .start-button {
+    max-height: 4rem;
+    max-width: 22rem;
+  }
+  .about-button {
+    max-height: 3.4rem;
+    max-width: 7.5rem;
+  }
+
+  .selection {
+    font-size: 2rem;
+    margin-top: 3%;
+  }
+
+  .portraits {
+    max-width: 40%;
+    margin-right: 8rem;
+    margin-top: 11%;
+    margin-bottom: 11%;
+  }
+  
+  .landscapes {
+    max-width: 40%;
+    margin-top: 2%;
+    }
+
+  .portrait-text {
+    /* margin-bottom: 80rem; */
+    text-align: center;
+  }
+
+  .portrait-div {
+    margin-bottom: 18%;
+  }
+
+  .landscape-text {
+  }
+
+  .carousel-control-next {
+    margin-right: 15%;
+  }
+
+  .carousel-control-prev {
+    margin-left: 15%;
+  }
+
+  .landscape-river-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  /* .landscape-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 100%;
+    border-radius: 1rem;
+  } */
+
+  .new-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+
+  .portrait-river-image {
+    max-width: 82%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-left: 8.7%;
+  }
+
+  .portrait-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 82%;
+    border-radius: 1rem;
+    margin-left: 8.7%;
+
+  }
+
+  
+}
+
+
+
+
+/* Button Sizes */
+
+/* Start Button Size 
+  height: 4rem;
+  width: 20rem;
+*/
+
+/* About Button Size
+  height: 4rem;
+  width: 8rem;
+*/
+
+/* Laptops 1201px - 1600px */
+@Media(min-width: 1201px) and (max-width: 1600px) {
+  .kanji-logo {
+    max-width: 50%;
+    margin-left: 25%;
+  }
+
+  .kanji-logo-screen-mode-page {
+    max-width: 37%;
+    margin-left: 30%;
+  }
+
+  #gif {
+    max-width: 65%;
+    /* margin-top: 2%; */
+  }
+  .start-button {
+    max-height: 4rem;
+    max-width: 20rem;
+  }
+  .about-button {
+    max-height: 4rem;
+    max-width: 10rem;
+  }
+
+  .selection {
+    font-size: 3rem;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+
+  .portraits {
+    max-width: 30%;
+    margin-right: 5rem;
+    margin-top: 7%;
+    margin-bottom: 7%;
+  }
+  
+  .landscapes {
+  max-width: 30%;
+  margin-left: 5rem;
+  /* margin-top: 2%; */
+  }
+
+  .portrait-text {
+    /* margin-bottom: 8rem; */
+  }
+
+  .portrait-div {
+    margin-bottom: 15%;
+  }
+
+  .landscape-div {
+    /* margin-bottom: 500%; */
+  }
+
+  .carousel-control-next {
+    margin-right: 20%;
+  }
+
+  .carousel-control-prev {
+    margin-left: 20%;
+  }
+
+  .landscape-river-page {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .landscape-river-image {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: cover;
+    margin-left: 8%;
+    border-radius: 1rem;
+  }
+  
+  .new-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 85%;
+    margin-left: 8%;
+    border-radius: 1rem;
+  }
+  
+  .portrait-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 40%;
+    border-radius: 1rem;
+    margin-left: 32%;
+
+  }
+
+  .portrait-river-image {
+    max-width: 40%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-left: 32%;
+  }
+
+}
+
+/* Button Sizes */
+
+/* Start Button Size 
+  height: 4rem;
+  width: 20rem;
+*/
+
+/* About Button Size
+  height: 4rem;
+  width: 8rem;
+*/
+
+/* Desktops  1601px and more*/
+@Media(min-width: 1601px) {
+  .kanji-logo {
+    display: grid;
+    text-align: center;
+    max-width: 45%;
+    margin-left: 27.5%;
+  }
+
+  .kanji-logo-screen-mode-page {
+    display: grid;
+    text-align: center;
+    max-width: 30%;
+    margin-left: 34.5%;
+  }
+
+  #gif {
+    max-width: 50%;
+  }
+  .start-button {
+  height: 4rem;
+  width: 20rem;
+  }
+  .about-button {
+    height: 4rem;
+    width: 8rem;
+  }
+  .selection {
+    font-size: 3rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .portraits {
+    max-width: 17%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+  }
+  
+  .landscapes {
+    max-width: 17%;
+    /* margin-left: 6rem; */
+  }
+
+  .portrait-div {
+    margin-bottom: 8%;
+  }
+
+  .landscape-div {
+    /* height: 200px;
+    width: 2000px; */
+    margin-bottom: 1%;
+  }
+
+  .carousel-control-next {
+    margin-right: 30%;
+  }
+
+  .carousel-control-prev {
+    margin-left: 30%;
+  }
+
+  .landscape-river-image {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: cover;
+    margin-left: 20%;
+    border-radius: 1rem;
+  }
+  
+  .new-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 60%;
+    margin-left: 20%;
+    border-radius: 1rem;
+  }
+
+
+  .portrait-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 36%;
+    border-radius: 1rem;
+    margin-left: 32%;
+
+  }
+
+  .portrait-river-image {
+    max-width: 36%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-left: 32%;
+  }
+
+}
+
+/* Button Sizes */
+
+/* Start Button Size 
+  height: 4rem;
+  width: 20rem;
+*/
+
+/* About Button Size
+  height: 4rem;
+  width: 8rem;
+*/
+
+
+
+
+/* Start Button Code */
+
+#start-button-div {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 30px;
+}
+
+.start-button-text {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #0E2954;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.start-button {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0.2rem;
+  border-radius: 1.2rem;
+  background: none;
+  height: 4rem;
+  background-size: 400%;
+  color: #fff;
+  border-color: white;
+}
+
+.start-button:hover::before {
+  transform: scaleX(1);
+}
+
+.start-button-style {
+  position: relative;
+  z-index: 1;
+}
+
+.start-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgb(5, 132, 170) 10.8%,
+    rgb(12, 172, 221) 94.3%
+  );
+  transition: all 0.300s;
+}
+
+
+
+
+/* About Button Code */
+
+/* About div */
+#about-div {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 13rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #0E2954;
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about-button {
+  position: relative;
+  overflow: hidden;
+  height: 4rem;
+  width: 8rem;
+  padding: 2rem, 2rem;
+  border-radius: 1.2rem;
+  background: none;
+  border-color: white;
+  background-size: 400%;
+  color: #fff;
+}
+
+.about-button:hover::before {
+  transform: scaleX(1);
+}
+
+.about-button-style {
+  position: relative;
+  z-index: 1;
+}
+
+.about-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgb(5, 132, 170) 10.8%,
+    rgb(12, 172, 221) 94.3%
+  );
+  transition: all 0.300s;
+}
+
+
+
+
+/* Kawa Model Text Code */
+#kawa-model {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1rem; 
+  font-weight: bolder;
+  word-spacing: 5px;
+}
+
+
+
+#start-button-section {
+
+}
+
+
+
+
+
+
+
+
+/* About Page Style Code  */
+
+
+#dr-iwama-pic {
+  width: 17rem;
+  margin-bottom: 5px;
+
+}
+
+
+.sections {
+  margin: 10px;
+  border-radius: 2rem;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  background-color: none;
+
+}
+
+.headers {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #213555;
+}
+
+
+
+#dr-iwama-description-div {
+  text-align: center;
+}
+
+#the-stuff {
+  background-color: none;
+}
+
+#what-is-occupational-therapy{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+
+.description {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 5px;
+
+}
+
+.element-header {
+  font-family: 'Mukta', sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: #213555;
+  margin: 0px;
+  text-align: left;
+}
+
+.element-description {
+  text-align: left;
+
+}
+
+.water-driftwood-description {
+  text-align: left;
+}
+
+.rocks-riverbanks-description {
+  text-align: right;
+}
+
+.element-div {
+padding: 3%;
+text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+
+.element-image {
+  /* text-align: center; */
+  width: 70%;
+}
+
+
+/* Screen Mode Page */
+
+.selection {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  color: rgb(199, 210, 214);
+}
+
+
+
+
+/* Create My River Page */
+
+.components {
+  
+}
+
+
+.portraits {
+transform: rotate(90deg);
+margin-left: auto;
+margin-right: auto;
+}
+
+.portrait-text {
+  /* color: black; */
+}
+
+
+
+
+
+.landscapes {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landscape:hover {
+  background-image: url(images/landscape\ hover\ image.png) no-repeat;
+}
+
+.icons {
+  text-align: center;
+}
+
+
+#dr-iwama-link {
+  text-decoration: none;
+}
+
+
+.kanji-logo-screen-mode-page {
+  margin-top: 2rem;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+}
+
+.screen-mode-page-image {
+  align-items: center;
+  margin: auto;
+}
+
+.screen-mode-text {
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+}
+
+.screen-mode-text:hover {
+  color: #6badf8;
+}
+
+.screen-mode-footer {
+  margin-top: 10%;
+}
+
+.arrow-padding {
+
+}
+
+.custom-tooltip {
+
+}
+
+.carousel-control-prev-icon {
+  /* background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+</svg>') !important; */
+}
+
+.carousel-icon {
+  background-image: url('bootstrap-icons-1.10.5/arrow-left-circle-fill.svg');
+}
+
+.carousel-control-prev {
+  left: 5%;
+  /* margin-left: 10%; */
+}
+
+.carousel-control-next {
+  right: 5%;
+  /* margin-right: 10%; */
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(81, 121, 180, 0.637);
+  border-radius: 50%;
+  top: calc(50% - 25px);
+  opacity: 1;
+}
+
+
+.mode-button {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  /* background-color: white; */
+  background: none;
+  border: none;
+  border-width: 0.5px;
+}
+
+
+.mode-button:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+/* Portrait Mode River Page */
+
+.draggable { 
+  /* width: 90px; 
+  height: 90px; 
+  padding: 0.5em; 
+  float: left; 
+  margin: 0 10px 10px 0;  */
+}
+
+#draggable, #draggable2 { 
+  margin-bottom:20px; 
+}
+
+
+#draggable { 
+  cursor: n-resize; 
+}
+
+
+#draggable2 { 
+  cursor: e-resize; 
+}
+
+
+#containment-wrapper { 
+  width: 150px; 
+  height:500px; 
+  border:2px solid #ccc; 
+  padding: 10px; 
+}
+
+#containment-wrapper-2 { 
+  width: 150px; 
+  height:500px; 
+  border:2px solid #ccc; 
+  padding: 10px; 
+  margin-left: 70%;
+  margin-bottom: 300%;
+}
+
+h3 { 
+  clear: left; 
+}
+
+.riverbank-text {
+  font-family: 'Josefin Sans', sans-serif;
+  width: 120px;
+  font-weight: bolder;
+}
+
+
+
+/* Landscape River Page */
+
+.creation-text {
+  text-align: center;
+  font-family: 'Merienda', cursive;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  line-height: 70%;
+  /* padding-top: 13%; */
+}
+
+
+.creation-div {
+  background-color: #19A7CE;
+  text-align: center;
+  margin: auto auto auto auto;
+  padding: 10px;
+}
+
+
+
+.river-container{
+  overflow: hidden;
+}
+
+/* .landscape-river-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+
+
+/* Element Slider code for both portrait and Landscape River */
+.choose-element {
+  width: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.choose-element-div {
+  background-color: white;
+}
+
+
+.choose-element-portrait {
+  width: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.choose-element-div {
+  background-color: white;
+}
+
+
+
+
+
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* #element-selection {
+  overflow: hidden;
+  background-color: white;
+  white-space: nowrap;
+} */
+
+.new-element-selection:hover .element-slide {
+  animation-play-state:paused;
+}
+
+.element-slide {
+  display: inline-block;
+  animation: 30s slide infinite linear;
+}
+
+
+
+
+
+
+/* ... Previous styles ... */
+
+.drop-zone {
+  /* position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  overflow: hidden; */
+}
+
+.dropped-image {
+  /* max-width: 100%;
+  max-height: 100%; */
+}
+
+
+
+
+
+
+
+
+/* .stick1_design{
+
+  background-image:url("images/Driftwood 2 (20230818094723).png");
+
+  background-size: cover;
+
+  background-position: center center;
+
+  width:70px;
+
+  height:40px;
+
+  text-align: center;
+
+  color:white;
+
+  border:none;
+
+  border-radius: 15px;
+
+  margin-left: 50%;
+
+} */
+
+
+
+.rocky {
+  /* width: 50%; */
+}
+
+
+
+
+
+/* Portrait River Page */
+.portrait-river-image {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-container {
+  position: relative;
+  display: inline; /* Make the container inline-block */
+  margin-left: 1rem;
+  margin-right: 1rem;
+  /* width: 200px; */
+  /* height: 200px; */
+
+}
+
+img {
+  max-width: 10%;
+  /* vertical-align: top; */   /* Remove any gap below the image */
+
+}
+
+.text-input {
+  font-family: 'Josefin Sans', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  font-size: 16px;
+  /* border: 1px solid #ccc; */
+  /* background: rgba(255, 255, 255, 0.8); */
+  border: none;
+  background: none;
+  color: white;
+  text-align: center;
+  /* font-size: 2rem; */
+  font-weight: bold;
+  width: 60%;
+  border-radius: 0.5rem;
+
+
+  /* width: 20%; */
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+
+/* styles.css */
+/* ... (previous styles) */
+
+.image-container::before {
+  /* content: var(--text-content, ""); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+
+
+.new-element-selection {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.new-choose-element {
+  width: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.new-choose-element-div {
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay {
+  /* position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); */
+  /* background: rgba(0, 0, 0, 0.5); Black see-through */
+  /* color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center; */
+}
+
+.landscape-river-image:hover .overlay {
+  opacity: 1;
+}
+
+#draggable-image {
+  /* width: 150px;
+  height: 150px; */
+  cursor: grab;
+}
+
+.dragging {
+  cursor: grabbing;
+}

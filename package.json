@@ -1,0 +1,14 @@
+{
+  "name": "kawa_model_web_app",
+  "version": "1.0.0",
+  "description": "HINT: To fiure out which Bootstrap components/snippets are used. Refer to the PDF below: https://github.com/appbrewery/tindog/blob/main/Bootstrap-snippets.pdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
