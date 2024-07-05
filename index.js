@@ -1,72 +1,78 @@
-// Bootstrap Tool Tip
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+document.addEventListener('DOMContentLoaded', (event) => {
+    const draggableElements = document.querySelectorAll('.image-container img');
+    const dropZone = document.getElementById('container');
 
+    draggableElements.forEach(elem => {
+        elem.addEventListener('mousedown', (e) => {
+            e.preventDefault();
 
+            const clone = elem.cloneNode(true);
+            clone.style.position = 'absolute';
+            clone.style.zIndex = 1000;
+            document.body.appendChild(clone);
 
-// Bootstrap Carousel
-const myCarouselElement = document.querySelector('#myCarousel')
+            moveAt(e.pageX, e.pageY);
 
-const carousel = new bootstrap.Carousel(myCarouselElement, {
-  interval: 2000,
-  touch: false
-})
+            function moveAt(pageX, pageY) {
+                clone.style.left = pageX - clone.offsetWidth / 2 + 'px';
+                clone.style.top = pageY - clone.offsetHeight / 2 + 'px';
+            }
 
-// Drag and Drop
+            function onMouseMove(event) {
+                moveAt(event.pageX, event.pageY);
+            }
 
+            document.addEventListener('mousemove', onMouseMove);
 
+            clone.addEventListener('mouseup', (event) => {
+                document.removeEventListener('mousemove', onMouseMove);
 
-// script.js
-// document.addEventListener("DOMContentLoaded", function () {
-//   const textInput = document.getElementById("text-input");
-  
-//   textInput.addEventListener("input", function () {
-//     const imgContainer = document.querySelector(".image-container");
-//     imgContainer.style.setProperty("--text-content", `"${this.value}"`);
-//   });
-// });
+                const rect = dropZone.getBoundingClientRect();
+                if (event.pageX >= rect.left && event.pageX <= rect.right && event.pageY >= rect.top && event.pageY <= rect.bottom) {
+                    dropZone.appendChild(clone);
+                    clone.style.left = event.pageX - rect.left - clone.offsetWidth / 2 + 'px';
+                    clone.style.top = event.pageY - rect.top - clone.offsetHeight / 2 + 'px';
+                    makeDraggable(clone);
+                } else {
+                    clone.remove();
+                }
 
+                clone.removeEventListener('mouseup', arguments.callee);
+            });
+        });
+    });
 
+    function makeDraggable(element) {
+        element.addEventListener('mousedown', (e) => {
+            e.preventDefault();
 
+            let offsetX = e.clientX - element.getBoundingClientRect().left;
+            let offsetY = e.clientY - element.getBoundingClientRect().top;
 
-// Drag and Drop 
+            function moveAt(pageX, pageY) {
+                const rect = dropZone.getBoundingClientRect();
+                let newX = pageX - rect.left - offsetX;
+                let newY = pageY - rect.top - offsetY;
 
-const container = document.getElementById('container');
-const draggableImage = document.getElementById('draggable-image');
+                // Constrain within the drop zone
+                if (newX < 0) newX = 0;
+                if (newY < 0) newY = 0;
+                if (newX + element.offsetWidth > rect.width) newX = rect.width - element.offsetWidth;
+                if (newY + element.offsetHeight > rect.height) newY = rect.height - element.offsetHeight;
 
-// Add drag and drop events to the container
-container.addEventListener('dragover', function(event) {
-    event.preventDefault();
-    event.dataTransfer.dropEffect = 'move';
-    container.classList.add('drag-over');
+                element.style.left = newX + 'px';
+                element.style.top = newY + 'px';
+            }
+
+            function onMouseMove(event) {
+                moveAt(event.pageX, event.pageY);
+            }
+
+            document.addEventListener('mousemove', onMouseMove);
+
+            document.addEventListener('mouseup', () => {
+                document.removeEventListener('mousemove', onMouseMove);
+            }, { once: true });
+        });
+    }
 });
-
-container.addEventListener('dragleave', function() {
-    container.classList.remove('drag-over');
-});
-
-container.addEventListener('drop', function(event) {
-    event.preventDefault();
-    container.classList.remove('drag-over');
-    // Move the image to the container
-    container.appendChild(draggableImage);
-});
-
-// Add drag events to the image
-draggableImage.addEventListener('dragstart', function(event) {
-    event.dataTransfer.setData('text/plain', draggableImage.id);
-    draggableImage.classList.add('dragging');
-});
-
-draggableImage.addEventListener('dragend', function() {
-    draggableImage.classList.remove('dragging');
-});
-
-
-
-
-
-
-
-
-

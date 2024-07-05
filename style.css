@@ -1,550 +1,1168 @@
-/*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
-*/
+/* Homepage Style Code  */
 
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: #e5e7eb;
-  /* 2 */
+/* Homepage Background Animation */
+
+.gradient-background {
+  background: linear-gradient(300deg, #F5EFE7, #19A7CE, #001B3A);
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
 }
 
-::before,
-::after {
-  --tw-content: '';
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-5. Use the user's configured `sans` font-feature-settings by default.
-6. Use the user's configured `sans` font-variation-settings by default.
-*/
-
-html {
-  line-height: 1.5;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -moz-tab-size: 4;
-  /* 3 */
-  -o-tab-size: 4;
-     tab-size: 4;
-  /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* 4 */
-  font-feature-settings: normal;
-  /* 5 */
-  font-variation-settings: normal;
-  /* 6 */
+body{
+  /* padding-top: 3rem; */
 }
 
-/*
-1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-*/
-
-body {
-  margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
+/* Main Title "Create Your Animation" Gif */
+#main-title {
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
+/* Create Your River gif  */
+#gif {
+}
+  
 
-hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  border-top-width: 1px;
-  /* 3 */
+
+    /* Logo*/
+.image {
+  align-items: center;
+  margin: auto;
+
 }
 
-/*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
+.kanji-logo {
 
-abbr:where([title]) {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+  /* -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.02));   */
+}
+  
+
+
+
+
+/* Media Queries for Elememts Across all Web Pages*/
+/* Mobile Devices 319px - 480px */
+@Media(max-width: 480px) {  
+  .kanji-logo {
+    max-width: 100%;
+  }
+  #gif {
+    max-width: 100%;
+    /* margin-top: 5%; */
+  }
+
+  .kanji-logo-screen-mode-page {
+    max-width: 70%;
+    margin-left: 13%;
+  }
+
+  .start-button {
+    max-height: 3rem;
+    max-width: 17rem;
+  }
+  .about-button {
+    max-height: 3rem;
+    max-width: 7rem;
+  }
+
+  body {
+    padding-top: 0.7rem;
+  }
+
+  .selection {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+  }
+
+  .portraits {
+    max-width: 70%;
+    margin-top: 19%;
+    margin-bottom: 19%;
+  }
+  
+  .landscapes {
+   max-width: 70%;
+  }
+
+  .portrait-div {
+    margin-bottom: 28%;
+  }
+
+  .portrait-text {
+  }
+
+  .landscape-div {
+  }
+
+  .description {
+    text-align: left;
+  }
+
+  .headers {
+    text-align: left;
+  }
+
+  .landscape-river-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  .new-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+
+  .portrait-river-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    /* margin-left: 1.5%; */
+  }
+
+  .portrait-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+
 }
 
-/*
-Remove the default font size and weight for headings.
+
+
+/* Button Sizes */
+
+/* Start Button Size 
+  height: 4rem;
+  width: 20rem;
 */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
+/* About Button Size
+  height: 4rem;
+  width: 8rem;
+*/
+
+/* iPads and Tablets 481px - 1200px */
+@Media(min-width: 481px) and (max-width: 1200px) {
+  .kanji-logo {
+    max-width: 70%;
+    margin-left: 14.5%;
+  }
+
+  .kanji-logo-screen-mode-page {
+    max-width: 50%;
+    margin-left: 24%;
+  }
+
+  #gif {
+    max-width: 80%;
+    /* margin-top: 5%; */
+  }
+  .start-button {
+    max-height: 4rem;
+    max-width: 22rem;
+  }
+  .about-button {
+    max-height: 3.4rem;
+    max-width: 7.5rem;
+  }
+
+  .selection {
+    font-size: 2rem;
+    margin-top: 3%;
+  }
+
+  .portraits {
+    max-width: 40%;
+    margin-right: 8rem;
+    margin-top: 11%;
+    margin-bottom: 11%;
+  }
+  
+  .landscapes {
+    max-width: 40%;
+    margin-top: 2%;
+    }
+
+  .portrait-text {
+    /* margin-bottom: 80rem; */
+    text-align: center;
+  }
+
+  .portrait-div {
+    margin-bottom: 18%;
+  }
+
+  .landscape-text {
+  }
+
+  .carousel-control-next {
+    margin-right: 15%;
+  }
+
+  .carousel-control-prev {
+    margin-left: 15%;
+  }
+
+  .landscape-river-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  /* .landscape-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 100%;
+    border-radius: 1rem;
+  } */
+
+  .new-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+
+  .portrait-river-image {
+    max-width: 82%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-left: 8.7%;
+  }
+
+  .portrait-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 82%;
+    border-radius: 1rem;
+    margin-left: 8.7%;
+
+  }
+
+  
 }
 
-/*
-Reset links to optimize for opt-in styling instead of opt-out.
+
+
+
+/* Button Sizes */
+
+/* Start Button Size 
+  height: 4rem;
+  width: 20rem;
 */
 
-a {
-  color: inherit;
-  text-decoration: inherit;
+/* About Button Size
+  height: 4rem;
+  width: 8rem;
+*/
+
+/* Laptops 1201px - 1600px */
+@Media(min-width: 1201px) and (max-width: 1600px) {
+  .kanji-logo {
+    max-width: 50%;
+    margin-left: 25%;
+  }
+
+  .kanji-logo-screen-mode-page {
+    max-width: 37%;
+    margin-left: 30%;
+  }
+
+  #gif {
+    max-width: 65%;
+    /* margin-top: 2%; */
+  }
+  .start-button {
+    max-height: 4rem;
+    max-width: 20rem;
+  }
+  .about-button {
+    max-height: 4rem;
+    max-width: 10rem;
+  }
+
+  .selection {
+    font-size: 3rem;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+
+  .portraits {
+    max-width: 30%;
+    margin-right: 5rem;
+    margin-top: 7%;
+    margin-bottom: 7%;
+  }
+  
+  .landscapes {
+  max-width: 30%;
+  margin-left: 5rem;
+  /* margin-top: 2%; */
+  }
+
+  .portrait-text {
+    /* margin-bottom: 8rem; */
+  }
+
+  .portrait-div {
+    margin-bottom: 15%;
+  }
+
+  .landscape-div {
+    /* margin-bottom: 500%; */
+  }
+
+  .carousel-control-next {
+    margin-right: 20%;
+  }
+
+  .carousel-control-prev {
+    margin-left: 20%;
+  }
+
+  .landscape-river-page {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .landscape-river-image {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: cover;
+    margin-left: 8%;
+    border-radius: 1rem;
+  }
+  
+  .new-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 85%;
+    margin-left: 8%;
+    border-radius: 1rem;
+  }
+  
+  .portrait-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 40%;
+    border-radius: 1rem;
+    margin-left: 32%;
+
+  }
+
+  .portrait-river-image {
+    max-width: 40%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-left: 32%;
+  }
+
 }
 
-/*
-Add the correct font weight in Edge and Safari.
+/* Button Sizes */
+
+/* Start Button Size 
+  height: 4rem;
+  width: 20rem;
 */
 
-b,
-strong {
-  font-weight: bolder;
+/* About Button Size
+  height: 4rem;
+  width: 8rem;
+*/
+
+/* Desktops  1601px and more*/
+@Media(min-width: 1601px) {
+  .kanji-logo {
+    display: grid;
+    text-align: center;
+    max-width: 45%;
+    margin-left: 27.5%;
+  }
+
+  .kanji-logo-screen-mode-page {
+    display: grid;
+    text-align: center;
+    max-width: 30%;
+    margin-left: 34.5%;
+  }
+
+  #gif {
+    max-width: 50%;
+  }
+  .start-button {
+  height: 4rem;
+  width: 20rem;
+  }
+  .about-button {
+    height: 4rem;
+    width: 8rem;
+  }
+  .selection {
+    font-size: 3rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .portraits {
+    max-width: 17%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+  }
+  
+  .landscapes {
+    max-width: 17%;
+    /* margin-left: 6rem; */
+  }
+
+  .portrait-div {
+    margin-bottom: 8%;
+  }
+
+  .landscape-div {
+    /* height: 200px;
+    width: 2000px; */
+    margin-bottom: 1%;
+  }
+
+  .carousel-control-next {
+    margin-right: 30%;
+  }
+
+  .carousel-control-prev {
+    margin-left: 30%;
+  }
+
+  .landscape-river-image {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: cover;
+    margin-left: 20%;
+    border-radius: 1rem;
+  }
+  
+  .new-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 60%;
+    margin-left: 20%;
+    border-radius: 1rem;
+  }
+
+
+  .portrait-element-selection {
+    overflow: hidden;
+    background-color: white;
+    white-space: nowrap;
+    max-width: 36%;
+    border-radius: 1rem;
+    margin-left: 32%;
+
+  }
+
+  .portrait-river-image {
+    max-width: 36%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-left: 32%;
+  }
+
 }
 
-/*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+/* Button Sizes */
+
+/* Start Button Size 
+  height: 4rem;
+  width: 20rem;
 */
 
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+/* About Button Size
+  height: 4rem;
+  width: 8rem;
+*/
+
+
+
+
+/* Start Button Code */
+
+#start-button-div {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 30px;
 }
 
-/*
-Add the correct font size in all browsers.
-*/
+.start-button-text {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #0E2954;
+  text-align: center;
+  text-decoration: none;
 
-small {
-  font-size: 80%;
 }
 
-/*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-*/
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
+.start-button {
   position: relative;
-  vertical-align: baseline;
+  overflow: hidden;
+  padding-top: 0.2rem;
+  border-radius: 1.2rem;
+  background: none;
+  height: 4rem;
+  background-size: 400%;
+  color: #fff;
+  border-color: white;
 }
 
-sub {
-  bottom: -0.25em;
+.start-button:hover::before {
+  transform: scaleX(1);
 }
 
-sup {
-  top: -0.5em;
+.start-button-style {
+  position: relative;
+  z-index: 1;
 }
 
-/*
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-3. Remove gaps between table borders by default.
-*/
-
-table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
-  border-collapse: collapse;
-  /* 3 */
+.start-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgb(5, 132, 170) 10.8%,
+    rgb(12, 172, 221) 94.3%
+  );
+  transition: all 0.300s;
 }
 
-/*
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-feature-settings: inherit;
-  /* 1 */
-  font-variation-settings: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  font-weight: inherit;
-  /* 1 */
-  line-height: inherit;
-  /* 1 */
-  color: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-  padding: 0;
-  /* 3 */
+
+
+/* About Button Code */
+
+/* About div */
+#about-div {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 13rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/*
-Remove the inheritance of text transform in Edge and Firefox.
-*/
-
-button,
-select {
-  text-transform: none;
+.about {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #0E2954;
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Remove default button styles.
-*/
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-  /* 1 */
-  background-color: transparent;
-  /* 2 */
-  background-image: none;
-  /* 2 */
+.about-button {
+  position: relative;
+  overflow: hidden;
+  height: 4rem;
+  width: 8rem;
+  padding: 2rem, 2rem;
+  border-radius: 1.2rem;
+  background: none;
+  border-color: white;
+  background-size: 400%;
+  color: #fff;
 }
 
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
-
-:-moz-focusring {
-  outline: auto;
+.about-button:hover::before {
+  transform: scaleX(1);
 }
 
-/*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-*/
-
-:-moz-ui-invalid {
-  box-shadow: none;
+.about-button-style {
+  position: relative;
+  z-index: 1;
 }
 
-/*
-Add the correct vertical alignment in Chrome and Firefox.
-*/
-
-progress {
-  vertical-align: baseline;
+.about-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgb(5, 132, 170) 10.8%,
+    rgb(12, 172, 221) 94.3%
+  );
+  transition: all 0.300s;
 }
 
-/*
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
 
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
+
+
+/* Kawa Model Text Code */
+#kawa-model {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1rem; 
+  font-weight: bolder;
+  word-spacing: 5px;
 }
 
-/*
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
 
-[type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+
+#start-button-section {
+
 }
 
-/*
-Remove the inner padding in Chrome and Safari on macOS.
-*/
 
-::-webkit-search-decoration {
-  -webkit-appearance: none;
+
+/* About Page Style Code  */
+
+
+#dr-iwama-pic {
+  width: 17rem;
+  margin-bottom: 5px;
+
 }
 
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
-*/
 
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+.sections {
+  margin: 10px;
+  border-radius: 2rem;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  background-color: none;
+
 }
 
-/*
-Add the correct display in Chrome and Safari.
-*/
-
-summary {
-  display: list-item;
+.headers {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #213555;
 }
 
-/*
-Removes the default spacing and border for appropriate elements.
-*/
 
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
 
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-legend {
-  padding: 0;
-}
-
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-Reset default styling for dialogs.
-*/
-
-dialog {
-  padding: 0;
-}
-
-/*
-Prevent resizing textareas horizontally by default.
-*/
-
-textarea {
-  resize: vertical;
-}
-
-/*
-1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-2. Set the default placeholder color to the user's configured gray 400 color.
-*/
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-input::placeholder,
-textarea::placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-/*
-Set the default cursor for buttons.
-*/
-
-button,
-[role="button"] {
-  cursor: pointer;
-}
-
-/*
-Make sure disabled buttons don't get the pointer cursor.
-*/
-
-:disabled {
-  cursor: default;
-}
-
-/*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-   This can trigger a poorly considered lint error in some tools but is included by design.
-*/
-
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
-}
-
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Make elements with the HTML hidden attribute stay hidden by default */
-
-[hidden] {
-  display: none;
-}
-
-*, ::before, ::after {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
-::backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
-.text-center {
+#dr-iwama-description-div {
   text-align: center;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+#the-stuff {
+  background-color: none;
 }
 
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
+#what-is-occupational-therapy{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+  font-size: 3rem;
 }
+
+
+.description {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 5px;
+
+}
+
+.element-header {
+  font-family: 'Mukta', sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: #213555;
+  margin: 0px;
+  text-align: left;
+}
+
+.element-description {
+  text-align: left;
+
+}
+
+.water-driftwood-description {
+  text-align: left;
+}
+
+.rocks-riverbanks-description {
+  text-align: right;
+}
+
+.element-div {
+padding: 3%;
+text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+
+.element-image {
+  /* text-align: center; */
+  width: 70%;
+}
+
+
+/* Screen Mode Page */
+
+.selection {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  color: rgb(199, 210, 214);
+}
+
+
+
+
+/* Create My River Page */
+
+.components {
+  
+}
+
+
+.portraits {
+transform: rotate(90deg);
+margin-left: auto;
+margin-right: auto;
+}
+
+.portrait-text {
+  /* color: black; */
+}
+
+
+
+
+
+.landscapes {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landscape:hover {
+  background-image: url(images/landscape\ hover\ image.png) no-repeat;
+}
+
+.icons {
+  text-align: center;
+}
+
+
+#dr-iwama-link {
+  text-decoration: none;
+}
+
+
+.kanji-logo-screen-mode-page {
+  margin-top: 2rem;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+}
+
+.screen-mode-page-image {
+  align-items: center;
+  margin: auto;
+}
+
+.screen-mode-text {
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+}
+
+.screen-mode-text:hover {
+  color: #6badf8;
+}
+
+.screen-mode-footer {
+  margin-top: 10%;
+}
+
+.arrow-padding {
+
+}
+
+.custom-tooltip {
+
+}
+
+.carousel-control-prev-icon {
+  /* background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+</svg>') !important; */
+}
+
+.carousel-icon {
+  background-image: url('bootstrap-icons-1.10.5/arrow-left-circle-fill.svg');
+}
+
+.carousel-control-prev {
+  left: 5%;
+  /* margin-left: 10%; */
+}
+
+.carousel-control-next {
+  right: 5%;
+  /* margin-right: 10%; */
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(81, 121, 180, 0.637);
+  border-radius: 50%;
+  top: calc(50% - 25px);
+  opacity: 1;
+}
+
+
+.mode-button {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  /* background-color: white; */
+  background: none;
+  border: none;
+  border-width: 0.5px;
+}
+
+
+.mode-button:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+/* Portrait Mode River Page */
+
+.draggable { 
+  /* width: 90px; 
+  height: 90px; 
+  padding: 0.5em; 
+  float: left; 
+  margin: 0 10px 10px 0;  */
+}
+
+#draggable, #draggable2 { 
+  margin-bottom:20px; 
+}
+
+
+#draggable { 
+  cursor: n-resize; 
+}
+
+
+#draggable2 { 
+  cursor: e-resize; 
+}
+
+
+#containment-wrapper { 
+  width: 150px; 
+  height:500px; 
+  border:2px solid #ccc; 
+  padding: 10px; 
+}
+
+#containment-wrapper-2 { 
+  width: 150px; 
+  height:500px; 
+  border:2px solid #ccc; 
+  padding: 10px; 
+  margin-left: 70%;
+  margin-bottom: 300%;
+}
+
+h3 { 
+  clear: left; 
+}
+
+.riverbank-text {
+  font-family: 'Josefin Sans', sans-serif;
+  width: 120px;
+  font-weight: bolder;
+}
+
+
+
+/* Landscape River Page */
+
+.creation-text {
+  text-align: center;
+  font-family: 'Merienda', cursive;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  line-height: 70%;
+  /* padding-top: 13%; */
+}
+
+
+.creation-div {
+  background-color: #19A7CE;
+  text-align: center;
+  margin: auto auto auto auto;
+  padding: 10px;
+}
+
+
+
+.river-container{
+  overflow: hidden;
+}
+
+
+/* Element Slider code for both portrait and Landscape River */
+.choose-element {
+  width: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.choose-element-div {
+  background-color: white;
+}
+
+
+.choose-element-portrait {
+  width: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.choose-element-div {
+  background-color: white;
+}
+
+
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* #element-selection {
+  overflow: hidden;
+  background-color: white;
+  white-space: nowrap;
+} */
+
+.new-element-selection:hover .element-slide {
+  animation-play-state:paused;
+}
+
+.element-slide {
+  display: inline-block;
+  animation: 30s slide infinite linear;
+}
+
+
+
+
+
+.rocky {
+  /* width: 50%; */
+}
+
+
+
+
+
+/* Portrait River Page */
+.portrait-river-image {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-container {
+  position: relative;
+  display: inline; /* Make the container inline-block */
+  margin-left: 1rem;
+  margin-right: 1rem;
+  /* width: 200px; */
+  /* height: 200px; */
+
+}
+
+img {
+  max-width: 10%;
+  /* vertical-align: top; */   /* Remove any gap below the image */
+}
+
+.text-input {
+  font-family: 'Josefin Sans', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  font-size: 16px;
+  /* border: 1px solid #ccc; */
+  /* background: rgba(255, 255, 255, 0.8); */
+  border: none;
+  background: none;
+  color: white;
+  text-align: center;
+  /* font-size: 2rem; */
+  font-weight: bold;
+  width: 60%;
+  border-radius: 0.5rem;
+
+
+  /* width: 20%; */
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+
+/* styles.css */
+/* ... (previous styles) */
+
+.image-container::before {
+  /* content: var(--text-content, ""); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+
+
+.new-element-selection {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.new-choose-element {
+  width: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.new-choose-element-div {
+  background-color: white;
+}
+
+.overlay {
+  /* position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); */
+  /* background: rgba(0, 0, 0, 0.5); Black see-through */
+  /* color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center; */
+}
+
+.landscape-river-image:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+
+.river-container {
+  position: relative;
+}
+.dropped-item {
+  cursor: move;
+}
+
+
+
 
