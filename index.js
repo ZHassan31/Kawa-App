@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const clone = elem.cloneNode(true);
             clone.style.position = 'absolute';
             clone.style.zIndex = 1000;
+            clone.style.width = elem.width + 'px';
+            clone.style.height = elem.height + 'px';
+            clone.style.cursor = 'move';
             document.body.appendChild(clone);
 
             moveAt(e.pageX, e.pageY);
@@ -24,30 +27,35 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             document.addEventListener('mousemove', onMouseMove);
 
-            clone.addEventListener('mouseup', (event) => {
+            clone.addEventListener('mouseup', function onMouseUp(event) {
                 document.removeEventListener('mousemove', onMouseMove);
+                clone.removeEventListener('mouseup', onMouseUp);
 
                 const rect = dropZone.getBoundingClientRect();
-                if (event.pageX >= rect.left && event.pageX <= rect.right && event.pageY >= rect.top && event.pageY <= rect.bottom) {
+                const dropX = event.pageX - rect.left - clone.offsetWidth / 2;
+                const dropY = event.pageY - rect.top - clone.offsetHeight / 2;
+
+                // Ensure the element stays within the boundaries of the drop zone
+                if (dropX >= 0 && dropX + clone.offsetWidth <= rect.width && dropY >= 0 && dropY + clone.offsetHeight <= rect.height) {
+                    clone.style.left = dropX + 'px';
+                    clone.style.top = dropY + 'px';
                     dropZone.appendChild(clone);
-                    clone.style.left = event.pageX - rect.left - clone.offsetWidth / 2 + 'px';
-                    clone.style.top = event.pageY - rect.top - clone.offsetHeight / 2 + 'px';
                     makeDraggable(clone);
                 } else {
                     clone.remove();
                 }
-
-                clone.removeEventListener('mouseup', arguments.callee);
             });
         });
     });
 
     function makeDraggable(element) {
+        let offsetX, offsetY;
+
         element.addEventListener('mousedown', (e) => {
             e.preventDefault();
 
-            let offsetX = e.clientX - element.getBoundingClientRect().left;
-            let offsetY = e.clientY - element.getBoundingClientRect().top;
+            offsetX = e.clientX - element.getBoundingClientRect().left;
+            offsetY = e.clientY - element.getBoundingClientRect().top;
 
             function moveAt(pageX, pageY) {
                 const rect = dropZone.getBoundingClientRect();
