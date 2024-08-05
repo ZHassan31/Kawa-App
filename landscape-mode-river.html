@@ -9,22 +9,11 @@
 
   <!--Title of the Website-->
   <title>Kawa Model</title>
-
-
-
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
-
-
-
 
   <!--Bootstrap Links-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
-
-  
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-
 
   <!-- Below are the links to the fonts used in the website  -->
   <!-- Font 1 -->
@@ -58,124 +47,107 @@
   <!-- Font Awesome Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
   <!-- Link for Favicon Images -->
   <link rel="apple-touch-icon" sizes="180x180" href="Favicon_Images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="Favicon_Images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="Favicon_Images/favicon-16x16.png">
   <link rel="manifest" href="Favicon_Images/site.webmanifest">
 
-
   <!-- Style Sheet Link  (This is the url that links this file to the style sheet) -->
   <link rel="stylesheet" href="index_and_about_style.css">
-
   <link rel="stylesheet" href="bootstrap-icons-1.10.5/bootstrap-icons.css">
 
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $(".image-container img").draggable({
+        helper: "clone",
+        revert: "invalid"
+      });
+
+      $(".river-container").droppable({
+        accept: ".image-container img",
+        drop: function(event, ui) {
+          
+          let droppedItem = ui.helper.clone();
+          droppedItem.removeClass("ui-draggable-dragging");
+          droppedItem.draggable({
+            containment: ".river-container"
+          });
+          $(this).append(droppedItem);
+        }
+      });
+    });
+  </script>
 </head>
 
 <body class="gradient-background landscape-river-page">
 
-
-
 <div id="main-title">
-      <img id="gif" class="gif-mode" src="gif/Cropped_Blue_Create_Your_River_Animation.gif" alt="Create Your River">
+  <img id="gif" class="gif-mode" src="gif/Cropped_Blue_Create_Your_River_Animation.gif" alt="Create Your River">
 </div>
-
 
 <!-- The slider above the river containing the selection of elements -->
 <div id="the-container">
-
   <div class="new-element-selection">
-<div class="element-slide new-choose-element-div slide">
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Rock 1 (20230818094851).png" alt="Your Image">
-  </div>
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Rock 2 (20230818094840).png" alt="Your Image">
-  </div>
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Rock 3 (20230818094827).png" alt="Your Image">
-  </div>
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Rock 4 (20230818094813).png" alt="Your Image">
-  </div>
-
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Driftwood 1 (20230818094738).png"  alt="Your Image">
-  </div>
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Driftwood 2 (20230818094723).png" alt="Your Image">
-  </div>
-</div>
-
-
-<div class="element-slide new-choose-element-div slide">
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Rock 1 (20230818094851).png" alt="Your Image">
-  </div>
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Rock 2 (20230818094840).png" alt="Your Image">
-  </div>
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Rock 3 (20230818094827).png" alt="Your Image">
-  </div>
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Rock 4 (20230818094813).png" alt="Your Image">
-  </div>
-
-  <div class="image-container new-choose-element">
-    <img src="images/Driftwood 1 (20230818094738).png"  alt="Your Image">
-  </div>
-  
-  <div class="image-container new-choose-element">
-    <img src="images/Driftwood 2 (20230818094723).png" alt="Your Image">
-  </div>
-</div>
-
- </div>
-
- <!-- The Image containing the river -->
- <div>
-     <div class="river-container" id="container">
-         <img src="images/Project (20230809110014).png" class="landscape-river-image" alt="Landscape River">
-         <!-- <img src="images/landscape river-river cutout.png" class="landscape-river-image overlay" alt="Landscape River"> -->
-
-     </div>
- </div>
-</div>
-
-
-
-
-
-
-    <div class="screen-mode-footer">
-      <h6 id="kawa-model">KAWA MODEL</h6>
+    <div class="element-slide new-choose-element-div slide">
+      <div class="image-container new-choose-element">
+        <img src="images/Rock 1 (20230818094851).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Rock 2 (20230818094840).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Rock 3 (20230818094827).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Rock 4 (20230818094813).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Driftwood 1 (20230818094738).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Driftwood 2 (20230818094723).png" alt="Your Image" class="draggable">
+      </div>
     </div>
+    <div class="element-slide new-choose-element-div slide">
+      <div class="image-container new-choose-element">
+        <img src="images/Rock 1 (20230818094851).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Rock 2 (20230818094840).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Rock 3 (20230818094827).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Rock 4 (20230818094813).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Driftwood 1 (20230818094738).png" alt="Your Image" class="draggable">
+      </div>
+      <div class="image-container new-choose-element">
+        <img src="images/Driftwood 2 (20230818094723).png" alt="Your Image" class="draggable">
+      </div>
+    </div>
+  </div>
 
-   
+  <!-- The Image containing the river -->
+  <div>
+    <div class="river-container">
+      <img src="images/Project (20230809110014).png" class="landscape-river-image droppable" alt="Landscape River">
+    </div>
+  </div>
+</div>
 
-  <!-- Index.js Link -->
+<div class="screen-mode-footer">
+  <h6 id="kawa-model">KAWA MODEL</h6>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="index.js"></script>
+<!-- Index.js Link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="index.js"></script>
 </body>
 
-
-
-
-
-
 </html>
-

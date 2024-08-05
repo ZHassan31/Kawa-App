@@ -968,8 +968,9 @@ h3 {
 }
 
 
+
 /* Element Slider code for both portrait and Landscape River */
-.choose-element {
+/* .choose-element {
   width: 10%;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -992,12 +993,12 @@ h3 {
 
 .choose-element-div {
   background-color: white;
-}
+} */
 
 
 
 
-@keyframes slide {
+/* @keyframes slide {
   from {
     transform: translateX(0);
   }
@@ -1006,11 +1007,6 @@ h3 {
   }
 }
 
-/* #element-selection {
-  overflow: hidden;
-  background-color: white;
-  white-space: nowrap;
-} */
 
 .new-element-selection:hover .element-slide {
   animation-play-state:paused;
@@ -1019,15 +1015,11 @@ h3 {
 .element-slide {
   display: inline-block;
   animation: 30s slide infinite linear;
-}
+} */
 
 
 
 
-
-.rocky {
-  /* width: 50%; */
-}
 
 
 
@@ -1142,20 +1134,13 @@ img {
 
 
 
-.river-container {
-  position: relative;
-  width: 100%;
-  height: 500px; /* Adjust height as needed */
-  border: 2px solid #000;
-}
 
-.dropped-item {
-  cursor: move;
-}
 
-.image-container img {
-  cursor: grab;
-}
+
+
+
+
+
 
 
 
